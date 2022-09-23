@@ -1,0 +1,9 @@
+{
+    "name": "team-vnb/fil-rouge",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "require": {}
+}
