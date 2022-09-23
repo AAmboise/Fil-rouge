@@ -1,0 +1,15 @@
+{
+    "name": "stagiaire/fil-rouge",
+    "autoload": {
+        "psr-4": {
+            "Stagiaire\\FilRouge\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "AAmboise",
+            "email": "adrien.amboise@yahoo.fr"
+        }
+    ],
+    "require": {}
+}
