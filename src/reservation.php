@@ -18,7 +18,7 @@ class Reservation
         $name = $data['name'];
         $email = $data['email'];
         //creer une requete SQL
-        $req = $this->db->prepare('INSERT INTO reservation VALUES (:date, :name, :email)');
+        $req = $this->db->prepare('INSERT INTO reservations VALUES (:date, :name, :email)');
 
         $req->bindValue(':email', $email);
         $req->bindValue(':name', $name);
@@ -31,8 +31,11 @@ class Reservation
             return false;
         }
     }
-    public function getAvailableDate()
+    public function getAvailableDate() : array
     {
-        //....
+        $req = $this->db->prepare("SELECT * FROM reservations");
+        $req->execute();
+        $res = $req->fetchAll(\PDO::FETCH_ASSOC);
+        return $res;
     }
 }
