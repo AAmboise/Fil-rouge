@@ -17,8 +17,9 @@ class Reservation
         $date = $data['timestamp'];
         $name = $data['name'];
         $email = $data['email'];
-
+        //creer une requete SQL
         $req = $this->db->prepare('INSERT INTO reservation VALUES (:date, :name, :email)');
+
         $req->bindValue(':email', $email);
         $req->bindValue(':name', $name);
         $req->bindValue(':date', $date);
@@ -29,5 +30,9 @@ class Reservation
             echo $th;
             return false;
         }
+    }
+    public function getAvailableDate()
+    {
+        //....
     }
 }

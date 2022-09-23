@@ -4,13 +4,14 @@ use Src\Reservation;
 
 require "vendor/autoload.php";
 
-$formdata = $_POST;
-
-
-if ($SERVER['REQUEST_METHOD'] !== "POST" || !empty($formdata))
-{
-    exit;
-}
+//si ! method post => exit, si pas de données, exit
+if ($SERVER['REQUEST_METHOD'] !== "POST" || !empty($_POST)); exit;
 
 $reservation = new Reservation;
-$reservation->SaveReservation($formdata);
+
+try {
+    $reservation->SaveReservation($formdata);
+    header('Location: sucess.php');
+} catch (\Throwable $th) {
+    header('Location: fail.php');
+}
