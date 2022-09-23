@@ -1,15 +1,9 @@
 {
-    "name": "stagiaire/fil-rouge",
+    "name": "team-vnb/fil-rouge",
     "autoload": {
         "psr-4": {
-            "Stagiaire\\FilRouge\\": "src/"
+            "App\\": "src/"
         }
     },
-    "authors": [
-        {
-            "name": "AAmboise",
-            "email": "adrien.amboise@yahoo.fr"
-        }
-    ],
     "require": {}
 }
