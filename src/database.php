@@ -6,7 +6,7 @@ class Database
 {
     private static string $user = "root";
     private static string $pass = "";
-    private static string $dbname = "test";
+    private static string $dbname = "resa_salle";
 
     public static function getInstance() : \PDO
     {
